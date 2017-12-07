@@ -7,10 +7,12 @@ name = "pypi"
 
 [dev-packages]
 
+requests-mock = "*"
 
 
 [packages]
 
+requests = "*"
 
 
 [requires]
