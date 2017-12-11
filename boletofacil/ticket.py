@@ -30,3 +30,14 @@ class Ticket(object):
         except Exception as error:
             raise error
         return data
+
+    def list_charges(self, beginDueDate=None, endDueDate=None, beginPaymentDate=None, endPaymentDate=None):
+        try:
+            data = requests.post(self._get_url(resource='list-charges',
+                                               beginDueDate=beginDueDate,
+                                               endDueDate=endDueDate,
+                                               beginPaymentDate=beginPaymentDate,
+                                               endPaymentDate=endPaymentDate)).json()
+        except Exception as error:
+            raise error
+        return data

@@ -58,6 +58,19 @@ class TicketTestCase(unittest.TestCase):
                                                   payerCpfCnpj=10090997441,
                                                   payNumber='Testandoboleto'), response)
 
+    @requests_mock.Mocker()
+    def test_list_charges(self, request_mock):
+        url = 'https://sandbox.boletobancario.com/boletofacil/integration/api/v1/list-charges?' \
+              'token=12345&beginDueDate=01/12/2017&endDueDate=10/12/2017&'
+        response = {'success': True,
+                    'data': {'charges': [
+                                         {'link': 'https://sandbox.boletobancario.com/',
+                                          'code': 10069811, 'payNumber': 'BOLETO TESTE - Não é válido para pagamento',
+                                          'checkoutUrl': 'https://sandbox.boletobancario.com/',
+                                          'dueDate': '01/12/2017'}]}}
+        request_mock.post(url, json=response)
+        self.assertEqual(self.ticket.list_charges(beginDueDate='01/12/2017', endDueDate='10/12/2017'), response)
+
 
 if __name__ == '__main__':
     unittest.main()
