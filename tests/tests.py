@@ -1,7 +1,7 @@
 import unittest
 import requests_mock
 
-from boletofacil import Ticket
+from boletobancario import Ticket
 
 
 class TicketTestCase(unittest.TestCase):

@@ -13,10 +13,10 @@ except:
     pass
 
 
-setup(name='pyboletofacil',
+setup(name='pyboletobancario',
       version='0.0.1',
       description='Emita Boletos de Graça com CNPJ ou CPF. Você só é cobrado se receber!',
-      url='https://github.com/hudsonbrendon/pyboletofacil',
+      url='https://github.com/hudsonbrendon/pyboletobancario',
       author='Hudson Brendon',
       author_email='contato.hudsonbrendon@gmail.com',
       license='MIT',
