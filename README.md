@@ -87,3 +87,27 @@ Para a lista completa de argumentos visite a documentação da API em: https://w
 >>> ticket.cancel_charge(code=12345)
 ```
 Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#cancel_charge
+
+# Como contribuir?
+
+Clone o projeto no seu PC:
+
+```bash
+$ git clone https://github.com/hudsonbrendon/pyboletobancario.git
+```
+
+Certifique-se de que o [Pipenv](https://github.com/kennethreitz/pipenv) está instalado, caso contrário:
+
+```bash
+$ pip install -U pipenv
+```
+
+No diretório pyboletobancario instale as dependências executando o comando abaixo:
+
+```bash
+$ pipenv install --dev
+```
+
+# Licença
+
+[MIT](http://en.wikipedia.org/wiki/MIT_License)
