@@ -53,3 +53,37 @@ Ou
 >>> ticket.list_charges(beginPaymentDate='dd/mm/yyyy', endPaymentDate='dd/mm/yyy')
 ```
 Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#list_charges
+
+# Consulta de saldo
+
+```python
+>>> from ticket import Ticket
+
+>>> ticket = Ticket(<TOKEN>)
+
+>>> ticket.fetch_balance()
+```
+Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#simulacao
+
+
+# Solicitação de transferência
+
+```python
+>>> from ticket import Ticket
+
+>>> ticket = Ticket(<TOKEN>)
+
+>>> ticket.request_transfer(amount=100.00)
+```
+Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#transferencia
+
+# Cancelamento de cobrança
+
+```python
+>>> from ticket import Ticket
+
+>>> ticket = Ticket(<TOKEN>)
+
+>>> ticket.cancel_charge(code=12345)
+```
+Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#cancel_charge
