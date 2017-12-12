@@ -86,6 +86,13 @@ class TicketTestCase(unittest.TestCase):
         request_mock.post(url, json=response)
         self.assertEqual(self.ticket.request_transfer(), response)
 
+    @requests_mock.Mocker()
+    def test_cancel_charge(self, request_mock):
+        url = 'https://sandbox.boletobancario.com/boletofacil/integration/api/v1/cancel-charge?code=10070052&'
+        response = {'success': True, 'data': None}
+        request_mock.post(url, json=response)
+        self.assertEqual(self.ticket.cancel_charge(10070052), response)
+
 
 if __name__ == '__main__':
     unittest.main()

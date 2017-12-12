@@ -55,3 +55,10 @@ class Ticket(object):
         except Exception as error:
             raise error
         return data
+
+    def cancel_charge(self, code):
+        try:
+            data = requests.post(self._get_url(resource='cancel-charge', code=code)).json()
+        except Exception as error:
+            raise error
+        return data
