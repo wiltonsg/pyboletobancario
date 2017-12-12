@@ -41,3 +41,10 @@ class Ticket(object):
         except Exception as error:
             raise error
         return data
+
+    def fetch_balance(self):
+        try:
+            data = requests.post(self._get_url(resource='fetch-balance')).json()
+        except Exception as error:
+            raise error
+        return data

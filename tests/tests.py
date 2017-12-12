@@ -71,6 +71,13 @@ class TicketTestCase(unittest.TestCase):
         request_mock.post(url, json=response)
         self.assertEqual(self.ticket.list_charges(beginDueDate='01/12/2017', endDueDate='10/12/2017'), response)
 
+    @requests_mock.Mocker()
+    def test_fetch_balance(self, request_mock):
+        url = 'https://sandbox.boletobancario.com/boletofacil/integration/api/v1/fetch-balance'
+        response = {'success': True, 'data': {'transferableBalance': 0, 'withheldBalance': 0, 'balance': 0}}
+        request_mock.post(url, json=response)
+        self.assertEqual(self.ticket.fetch_balance(), response)
+
 
 if __name__ == '__main__':
     unittest.main()
