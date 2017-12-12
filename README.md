@@ -1,9 +1,9 @@
-# Pyboletofacil
+# Pyboletobancario
 
 Emita Boletos de Graça com CNPJ ou CPF. Você só é cobrado se receber!
 
-[![Build Status](https://travis-ci.org/hudsonbrendon/pyboletofacil.svg?branch=master)](https://travis-ci.org/hudsonbrendon/pyboletofacil)
-[![Github Issues](http://img.shields.io/github/issues/hudsonbrendon/pyboletofacil.svg?style=flat)](https://github.com/hudsonbrendon/pyboletofacil/issues?sort=updated&state=open)
+[![Build Status](https://travis-ci.org/hudsonbrendon/pyboletobancario.svg?branch=master)](https://travis-ci.org/hudsonbrendon/pyboletobancario)
+[![Github Issues](http://img.shields.io/github/issues/hudsonbrendon/pyboletobancario.svg?style=flat)](https://github.com/hudsonbrendon/pyboletobancario/issues?sort=updated&state=open)
 ![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ![Logo](logo.png)
@@ -12,7 +12,7 @@ Emita Boletos de Graça com CNPJ ou CPF. Você só é cobrado se receber!
 # Instalação
 
 ```bash
-$ pip install pyboletofacil
+$ pip install pyboletobancario
 ```
 ou
 
