@@ -63,7 +63,7 @@ Para a lista completa de argumentos visite a documentação da API em: https://w
 
 >>> ticket.fetch_balance()
 ```
-Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#simulacao
+Para a lista completa de argumentos visite a documentação da API em: https://www.boletobancario.com/boletofacil/integration/integration.html#saldo
 
 
 # Solicitação de transferência
