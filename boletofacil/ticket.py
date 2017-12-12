@@ -48,3 +48,10 @@ class Ticket(object):
         except Exception as error:
             raise error
         return data
+
+    def request_transfer(self):
+        try:
+            data = requests.post(self._get_url(resource='request-transfer')).json()
+        except Exception as error:
+            raise error
+        return data

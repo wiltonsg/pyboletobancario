@@ -78,6 +78,14 @@ class TicketTestCase(unittest.TestCase):
         request_mock.post(url, json=response)
         self.assertEqual(self.ticket.fetch_balance(), response)
 
+    @requests_mock.Mocker()
+    def test_request_transfer(self, request_mock):
+        url = 'https://sandbox.boletobancario.com/boletofacil/integration/api/v1/request-transfer'
+        response = {'errorMessage': 'Saldo insuficiente para transferência, deve ser maior que R$ 4,90.',
+                    'success': False}
+        request_mock.post(url, json=response)
+        self.assertEqual(self.ticket.request_transfer(), response)
+
 
 if __name__ == '__main__':
     unittest.main()
